@@ -71,14 +71,15 @@ As described above the architecture uses a dueling network style rather than an 
 My approach is similar to the above except that the initial convolutional layers have been replaced with one feed-forward layer. 
 Overall we have:
 
-1.  Input data which has 37 dimensions
+1.  Input data which has 37 dimensions\
 2.  An initial Linear layer with 64 neurons followed by relu activation
-**3.a   The Advantage branch**
-3.a.i    A Linear Layer with 32 neurons followed by relu activation
-3.a.ii  A Linear Layer with 5 neurons (corresponding to the actions) and no activation
-**3.a   The State Value branch**
-3.a.i    A Linear Layer with 32 neurons followed by relu activation
-3.a.ii  A Linear Layer with 1 neurons and no activation
+3.  \
+**a - The Advantage branch**\
+a.i    A Linear Layer with 32 neurons followed by relu activation\
+a.ii  A Linear Layer with 5 neurons (corresponding to the actions) and no activation\
+**b - The State Value branch**\
+b.i    A Linear Layer with 32 neurons followed by relu activation\
+b.ii  A Linear Layer with 1 neurons and no activation
 4.  Some post-processing to produce the value of state-action pairs, i.e. Qsa = Vs + Asa - max_a(Asa)
 
 
