@@ -1,9 +1,9 @@
 # DRLND-project-1-navigation
 [//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
-[image2]: https://s3.amazonaws.com/video.udacity-data.com/topher/2018/May/5aef2add_dqn/dqn.png "DQN diagram"
-[image3]: https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b3814f1_screen-shot-2018-06-30-at-6.40.09-pm/screen-shot-2018-06-30-at-6.40.09-pm.png "Rainbow"
+[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif=250x "Trained Agent"
+[image2]: https://s3.amazonaws.com/video.udacity-data.com/topher/2018/May/5aef2add_dqn/dqn.png=250x "DQN diagram"
+[image3]: https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b3814f1_screen-shot-2018-06-30-at-6.40.09-pm/screen-shot-2018-06-30-at-6.40.09-pm.png=250x "Rainbow"
 
 ### Summary
 This is the repository for the 1st project of the Deep reinforcement learning nanodegree program. The requiremrnt is to train an agent to navigate the Bananna Enviroment with an average score greater than 13 over 100 episodes. This repository provides the code to acheive this in 1000 episodes by using a DQN (Deep-Q Network) with the modifications of Double DQN, Prioritised experience replay, and Duel DQN.
@@ -47,16 +47,16 @@ To test a pre-trained agent (I've included one in this repository) simply open t
 
 ### What files are included
 
-### ipynb files
+#### ipynb files
 As stated above train_agent.ipynb and test_agent.ipynb are intuitive files that are all that's required to walk you through training or tested this agent. If however you would like to change the code (such as to specify a different model architecture, or hyperparameter selection) then you may find the following descriptions useful:
 
-### report.pdf
+#### report.pdf
 This describes the implementation in detail beyond the scope of this readme. read this file if you'd like to know more about: the model architecture, the DQN algorithm itself and the hyperparameters used, the modifications made such as Duel DQN and prioritised replay, or the suggestions for further work.
 
-### model.py
+#### model.py
 This is a simple python script that specifies the pytorch model architecture used. For this project the architecture is quite straightforward, a simple feed-forward neural network with linear layers. Added complexity however comes from the Duel-DQN implementation, which causes the computational graph to fork into state values and state-action values before recombining.
 
-### dqn_agent.py
+#### dqn_agent.py
 This file contains all of the functions required for the agent to store experience, sample and learn from it, and select actions in the enviroment. There is also a lot of extra complexity in this coode due to the prioritised experience replay and double DQN implementations.
 
 ### Agent design and implementation
