@@ -29,7 +29,7 @@ In order to run this code you will require:
 
 2.  The ml-agents package, which can be the installed following the following instructions: https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md
 
-3.  The Bananna Unity enviroment specific to your operating system, which can be found here: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation. After cloning this enviroment please replace the Bananna Folder with the one appropriate to your operating system, as well as change it's path when loaded at the begining of the script
+3.  The Bananna Unity enviroment specific to your operating system, which can be found here: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation. After cloning this enviroment download the bananna enviroment appropriate to your operating system, place the Bananna Folder with the root directory, as well as change it's path when loaded at the begining of the notebooks.
 
 
 ## How to run the repository
