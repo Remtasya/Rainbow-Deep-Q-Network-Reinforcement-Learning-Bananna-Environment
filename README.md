@@ -80,7 +80,21 @@ In Reinforcement learning, the goal is to have an agent learn how to navigate a 
 ### Deep Learning
 Famous in computer vision and natural language processing, deep learning uses machine learning to make predictions by leveraging vast amounts of training data and a flexible architecture that is able to generalise to previously unseen examples. In DQN we leverage this power for the purpose of predicting Q values, and use the agents experiences within the enviroment as a reusable form of training data. This proves to be a powerful combination thanks to Deep learning's ability to generalise given sufficent data and flexibility.
 
-In addition to vanilla DQN we also make use of the following modifications:
+
+**The DQN algorithm itself has several components:**
+
+#### Enviroment Navigation
+The Q network is designed to map states to state-action values. Thus we can feed it our current state and then determine the best action as the one that has the largest estimated state-action value. In practice we then adopt an epsilon-greedy approach for actually selecting an action (epsilon-greedy means selecting a random action epsilon of the time in order to encourage early exploration, and selecting the 'best' action 1-epsilon of the time.).
+
+
+#### Q-network Learning
+After we've collected enough state-action-reward-state experiences we start updating the model. This is acheived by sampling some of our experiences and then computing the empirically observed estimates of the state-action values compared to those estimated from the model. The difference between these two is coined the TD-error and we then make a small modification to the model weights to reduce this error, via neural network backpropagation of the TD-error.
+
+#### Iterations
+We simply iterate a process involving a combination of the above two procedures over many timesteps per episode, and many episodes, until convergence of the model weights is acheived. Further mathemetical details of DQN such as the update equations can be found in the above paper, and further details of the specifications used for this process can be found in the hyperparameter section of the Report.md file.
+
+\
+**In addition to vanilla DQN we also make use of the following modifications:**
 
 ### Double DQN
 Note that when updating our Q-values we assume the agent selects the action with the maximum estimated value in the next timestep. However since these action-value estimates are likely to be noisey, taking the max is likely to overestimate their true value. One small trick that reduces this problem a little bit is to use a slightly different model to select versus evaluate the maximum action value. In this implementation we use the current Q-network to select the best action, and then use the Q-target network to evaulate the value of said action, which is essentially a lagged version of the Q-network with weights updated less frequently.
