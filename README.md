@@ -50,7 +50,7 @@ To test a pre-trained agent (I've included one in this repository) simply open t
 ### ipynb files
 As stated above train_agent.ipynb and test_agent.ipynb are intuitive files that are all that's required to walk you through training or testing this agent. If however you would like to change the code (such as to specify a different model architecture, or hyperparameter selection) then you may find the following descriptions useful:
 
-### report.pdf
+### report.md
 This describes the implementation in detail beyond the scope of this readme. Read this file if you'd like to know more about: the model architecture, the DQN algorithm itself and the hyperparameters used, the modifications made such as Dual DQN and prioritised replay, or the suggestions for further work.
 
 ### model.py
