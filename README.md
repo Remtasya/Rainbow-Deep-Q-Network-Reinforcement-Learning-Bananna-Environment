@@ -35,13 +35,13 @@ In order to run this code you will require:
 ## How to run the repository
 
 
-### Watching a random agent
+### How to watch a random agent
 To confirm the enviroment is set up correctly I recommend running the random_agent.ipynb notebook to observe a randomly-acting agent.
 
-### How to train
+### How to train an agent
 To run the code from scratch simply open the train_agent.ipynb notebook and run the code.
 
-### How to test
+### How to test a trained agent
 To test a pre-trained agent (I've included one in this repository) simply open the test_agent.ipynb notebook and run the code.
 
 
