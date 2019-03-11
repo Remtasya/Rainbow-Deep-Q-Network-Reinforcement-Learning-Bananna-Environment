@@ -1,7 +1,7 @@
 # DRLND-project-1-navigation
 [//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent" {: height="200px"}
+[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent" 
 
 <image1 src="https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif" alt="Trained Agent" width="500"/>
 
@@ -14,7 +14,7 @@ This is the repository for the 1st project of the Deep reinforcement learning na
 ### Enviroment
 This Unity enviroment requires an agent to navigate a large square in order to collect banannas.
 
-![Trained Agent][image1]
+![Trained Agent][image1] {: height="200px"}
 
 The task is episodic with no set termination (although we will terminate after 500 timesteps).
 
