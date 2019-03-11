@@ -11,7 +11,7 @@ The algorithm used is based on the DQN algorithm described in this paper: https:
 
 <img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/May/5aef2add_dqn/dqn.png" alt="DQN diagram" width="550"/>
 
-DQN (Deep-Q-Networks) is an invovate approach in reinforcement learning that effectively combines two seperate fields:
+DQN (Deep-Q-Networks) is an innovative approach in reinforcement learning that effectively combines two seperate fields:
 
 ### Q-Learning
 
