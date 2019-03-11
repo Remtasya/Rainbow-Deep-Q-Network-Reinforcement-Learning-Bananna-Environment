@@ -24,9 +24,39 @@ Collecting a yellow bananna provides +1 reward while collecting a blue bananna p
 ### Dependencies
 In order to run this code you will require:
 
-Python 3 with the packages in the following repository: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation. The ml-agents package via the installation instructions https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md
-Bananna Unity enviroment
+1.  Python 3 with the packages in the following repository: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation, including pytorch.
 
+2.  The ml-agents package, which can be the installed following the following instructions: https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md
+
+3.  The Bananna Unity enviroment specific to your operating system, which can be found here: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation. After cloning this enviroment please replace the Bananna Folder with the one appropriate to your operating system, as well as change it's path when loaded at the begining of the script
+
+### How to run the repository
+
+
+#### Watching a random agent
+To confirm the enviroment is set up correctly I recommend running the random_agent.ipynb notebook to observe a randomly-acting agent.
+
+#### How to train
+To run the code from scratch simply open the train_agent.ipynb notebook and run the code.
+
+#### How to test
+To test a pre-trained agent (I've included one in this repository) simply open the test_agent.ipynb notebook and run the code.
+
+### What files are included
+
+#### ipynb files
+As stated above train_agent.ipynb and test_agent.ipynb are intuitive files that are all that's required to walk you through training or tested this agent. If however you would like to change the code (such as to specify a different model architecture, or hyperparameter selection) then you may find the following descriptions useful:
+
+### report.pdf
+This describes the implementation in detail beyond the scope of this readme. read this file if you'd like to know more about: the model architecture, the DQN algorithm itself and the hyperparameters used, the modifications made such as Duel DQN and prioritised replay, or the suggestions for further work.
+
+### model.py
+This is a simple python script that specifies the pytorch model architecture used. For this project the architecture is quite straightforward, a simple feed-forward neural network with linear layers. Added complexity however comes from the Duel-DQN implementation, which causes the computational graph to fork into state values and state-action values before recombining.
+
+### dqn_agent.py
+This file contains all of the functions required for the agent to store experience, sample and learn from it, and select actions in the enviroment. There is also a lot of extra complexity in this coode due to the prioritised experience replay and double DQN implementations.
+
+### Agent design and implementation
 
 DQN
 
