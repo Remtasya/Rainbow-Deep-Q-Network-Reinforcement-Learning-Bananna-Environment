@@ -110,7 +110,9 @@ Non-functional currently, leave as True
 Non-functional currently, leave as True
 
 **Priority_Replay_Paras (list of e,a,b floats):**\
-These determine the parameters of the priority modification. e adds some priority to all experiences to prevent over-fitting to a subset of the state-action space. Priorities are raised to the power of a, where a value close to 0 encourages uniform sampling whereas close to 1 emphasises priorities. Lastly the update rule itself becomes biased due to non-uniform sampling, as so must be corrected, with b controling the degree of correction, which is increased over the course of training.
+These determine the parameters of the priority modification. e adds some priority to all experiences to prevent over-fitting to a subset of the state-action space. Priorities are raised to the power of a, where a value close to 0 encourages uniform sampling whereas close to 1 emphasises priorities. Lastly the update rule itself becomes biased due to non-uniform sampling, as so must be corrected, with b controling the degree of correction, which is increased over the course of training. How these parameters relate to one another can be seen below:
+
+<img src="https://github.com/Remtasya/DRLND-project-1-navigation/blob/master/project_images/priority_replay.PNG" alt="replay" width="600"/>
 
 **GAMMA (float): discount rate**\
 Close to 1 will cause the agent to value all future rewards equally, while close to 0 will cause the agent to prioritise more immediate rewards. Unlike most hyperparameters, this will not only effect convergence but also the optimal policy converged to. For example if an agent must choose between collecting 1 bananna and then waiting 20 timeseteps versus collecting 2 banannas after 20 timesteps, then the optimal policy depends on the reard discount rate. Close to 1 is often best so I chose 0.99.
