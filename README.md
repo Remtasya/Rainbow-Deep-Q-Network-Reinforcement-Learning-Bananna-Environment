@@ -9,7 +9,9 @@ This is the repository for the 1st project of the Deep reinforcement learning na
 
 ### Enviroment
 This Unity enviroment requires an agent to navigate a large square in order to collect banannas.
+
 ![Trained Agent][image1]
+
 The task is episodic with no set termination (although we will terminate after 500 timesteps).
 
 #### State space
