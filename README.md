@@ -1,10 +1,5 @@
 # DRLND-project-1-navigation
 
-
-
-[image2]: =250x "DQN diagram" {: height="36px" width="36px"}
-[image3]: =250x "Rainbow"
-
 ### Summary
 This is the repository for the 1st project of the Deep reinforcement learning nanodegree program. The requiremrnt is to train an agent to navigate the Bananna Enviroment with an average score greater than 13 over 100 episodes. This repository provides the code to acheive this in 1000 episodes by using a DQN (Deep-Q Network) with the modifications of Double DQN, Prioritised experience replay, and Duel DQN.
 
@@ -65,7 +60,7 @@ This file contains all of the functions required for the agent to store experien
 
 The algorithm used is based on the DQN algorithm described in this paper: https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf
 
-<img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/May/5aef2add_dqn/dqn.png" alt="DQN diagram" width="500"/>
+<img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/May/5aef2add_dqn/dqn.png" alt="DQN diagram" width="550"/>
 
 DQN (Deep-Q-Networks) is an invovate approach in reinforcement learning that effectively combines two seperate fields:
 
@@ -95,7 +90,7 @@ Read more: https://arxiv.org/abs/1511.06581
 ### Further additions
 Additions that might improve the algorithm further are the other 3 modifications of the Rainbow implementation, which acheives state-of-the-art-performance in DQNs.
 
-<img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b3814f1_screen-shot-2018-06-30-at-6.40.09-pm/screen-shot-2018-06-30-at-6.40.09-pm.png" alt="Rainbow" width="350"/>
+<img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b3814f1_screen-shot-2018-06-30-at-6.40.09-pm/screen-shot-2018-06-30-at-6.40.09-pm.png" alt="Rainbow" width="400"/>
 
 **Namely these are:**
 
