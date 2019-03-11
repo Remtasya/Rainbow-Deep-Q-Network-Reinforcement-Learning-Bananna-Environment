@@ -45,8 +45,11 @@ Read more: https://arxiv.org/abs/1511.06581
 
 After ~550 episodes the agent was about to 'solve' the enviroment by attaining an average reward over 100 episodes greater than 13.0.
 
+A plot of score over time is shown below:
+
 <img src="https://github.com/Remtasya/DRLND-project-1-navigation/blob/master/project_images/Bananna_project_results.PNG" alt="Rainbow" width="400"/>
 
+### Hyperparameters
 #### Several Hyperparameters were used in this implementation which will be described below:
 
 
