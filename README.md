@@ -88,7 +88,7 @@ Note that when updating our Q-values we assume the agent selects the action with
 Read more: https://arxiv.org/abs/1509.06461
 
 ### Prioritised Experience replay
-In order to produce training data we store all state-action-reward tuples as experiences and then sample them randomly each time we update the model. Note though that some of these may be more valuable for learning that others. For example an agent may have plenty of experiences from the starting state but relatively little from more rare states. In this modification we use how 'surprising' an observed state-action value is as a measure of how 'useful' learning from it is, which formally is the absolute difference between the value we observed and what our model predicted is should have been.
+In order to produce training data we store all state-action-reward-state tuples as experiences and then sample them randomly each time we update the model. Note though that some of these may be more valuable for learning that others. For example an agent may have plenty of experiences from the starting state but relatively little from more rare states. In this modification we use how 'surprising' an observed state-action value is as a measure of how 'useful' learning from it is, which formally is the absolute difference between the value we observed and what our model predicted is should have been.
 
 Read more: https://arxiv.org/abs/1511.05952
 
