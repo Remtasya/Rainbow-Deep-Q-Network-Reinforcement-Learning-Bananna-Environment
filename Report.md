@@ -53,6 +53,8 @@ A plot of score over time is shown below:
 #### Several Hyperparameters were used in this implementation which will be described below:
 
 
+
+
 **n_episodes (int): maximum number of training episodes**
 the model was found to converge after ~1000 episodes.
 
