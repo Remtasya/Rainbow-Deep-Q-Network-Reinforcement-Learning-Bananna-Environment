@@ -19,8 +19,20 @@ In Reinforcement learning, the goal is to have an agent learn how to navigate a 
 
 ### Deep Learning
 
-Famous in computer vision and natural language processing, deep learning uses machine learning to make predictions by leveraging vast amounts of training data and a flexible architecture that is able to generalise to previously unseen examples. In DQN we leverage this power for the purpose of predicting Q values, and use the agents experiences within the enviroment as a reusable form of training data. This proves to be a powerful combination thanks to Deep learning's ability to generalise given sufficent data and flexibility.
+Famous in computer vision and natural language processing, deep learning uses machine learning to make predictions by leveraging vast amounts of training data and a flexible architecture that is able to generalise to previously unseen examples. In DQN we leverage this power for the purpose of predicting Q values, and use the agents experiences within the enviroment as a reusable form of training data. This proves to be a powerful combination thanks to Deep learning's ability to generalise given sufficent data and flexibility. 
 
+**The DQN algorithm itself has several components:**
+
+#### Enviroment Navigation
+The Q network is designed to map states to state-action values. Thus we can feed it our current state and then determine the best action as the one that has the largest estimated state-action value. In practice we then adopt an epsilon-greedy approach for actually selecting an action (epsilon-greedy means selecting a random action epsilon of the time in order to encourage early exploration, and selecting the 'best' action 1-epsilon of the time.).
+
+
+#### Q-network Learning
+After we've collected enough state-action-reward-state experiences we start updating the model. This is acheived by sampling some of our experiences and then computing the empirically observed estimates of the state-action values compared to those estimated from the model. The difference between these two is coined the TD-error and we then make a small modification to the model weights to reduce this error, via neural network backpropagation of the TD-error.
+
+#### Iterations
+We simply iterate a process involving a combination of the above two procedures over many timesteps per episode, and many episodes, until convergence of the model weights is acheived. Further mathemetical details of DQN such as the update equations can be found in the above paper, and further details of the specifications used for this process can be found in the below hyperparameter section.
+/
 In addition to vanilla DQN we also make use of the following modifications:
 
 ### Double DQN
@@ -31,7 +43,7 @@ Read more: https://arxiv.org/abs/1509.06461
 
 ### Prioritised Experience replay
 
-In order to produce training data we store all state-action-reward tuples as experiences and then sample them randomly each time we update the model. Note though that some of these may be more valuable for learning that others. For example an agent may have plenty of experiences from the starting state but relatively little from more rare states. In this modification we use how 'surprising' an observed state-action value is as a measure of how 'useful' learning from it is, which formally is the absolute difference between the value we observed and what our model predicted is should have been.
+In order to produce training data we store all state-action-reward-state tuples as experiences and then sample them randomly each time we update the model. Note though that some of these may be more valuable for learning that others. For example an agent may have plenty of experiences from the starting state but relatively little from more rare states. In this modification we use how 'surprising' an observed state-action value is as a measure of how 'useful' learning from it is, which formally is the absolute difference between the value we observed and what our model predicted is should have been.
 
 Read more: https://arxiv.org/abs/1511.05952
 
@@ -47,11 +59,30 @@ After ~550 episodes the agent was about to 'solve' the enviroment by attaining a
 
 A plot of score over time is shown below:
 
-<img src="https://github.com/Remtasya/DRLND-project-1-navigation/blob/master/project_images/Bananna_project_results.PNG" alt="Rainbow" width="400"/>
+<img src="https://github.com/Remtasya/DRLND-project-1-navigation/blob/master/project_images/Bananna_project_results.PNG" alt="Performance" width="400"/>
+
+### Neural Network Architecture
+
+As described above the architecture uses a dueling network style rather than an ordinary DQN, which are shown below for comparison
+
+<img src="https://github.com/Remtasya/DRLND-project-1-navigation/blob/master/project_images/Dueling_network.PNG" alt="Dueling" width="400"/>
+
+My approach is similar to the above except that the initial convolutional layers have been replaced with one feed-forward layer. 
+Overall we have:
+
+1.  Input data which has 37 dimensions
+2.  An initial Linear layer with 64 neurons followed by relu activation
+**3.a   The Advantage branch**
+3.a.i    A Linear Layer with 32 neurons followed by relu activation
+3.a.ii  A Linear Layer with 5 neurons (corresponding to the actions) and no activation
+**3.a   The State Value branch**
+3.a.i    A Linear Layer with 32 neurons followed by relu activation
+3.a.ii  A Linear Layer with 1 neurons and no activation
+4.  Some post-processing to produce the value of state-action pairs, i.e. Qsa = Vs + Asa - max_a(Asa)
+
 
 ## Hyperparameters
 #### Several Hyperparameters were used in this implementation which will be described below:
-\
 \
 **n_episodes (int): maximum number of training episodes**\
 the model was found to converge after ~1000 episodes.
