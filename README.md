@@ -1,11 +1,11 @@
 # DRLND-project-1-navigation
 
 ## Summary
-This is the repository for the 1st project of the Deep reinforcement learning nanodegree program. The requiremrnt is to train an agent to navigate the Bananna Enviroment with an average score greater than 13 over 100 episodes. This repository provides the code to acheive this in 550 episodes by using a DQN (Deep-Q Network) with the modifications of Double DQN, Prioritised experience replay, and Duel DQN.
+This is the repository for the 1st project of the Deep Reinforcement Learning nanodegree program. The requirement is to train an agent to navigate the Banana Envirnoment with an average score of greater than 13 over 100 episodes. This repository provides the code to achieve this in 550 episodes by using a DQN (Deep-Q Network) with the modifications of Double DQN, Prioritised experience replay, and Duel DQN.
 
 
-## Enviroment
-This Unity enviroment requires an agent to navigate a large square in order to collect banannas.
+## Environment
+This Unity environment requires an agent to navigate a large square in order to collect bananas.
 
 <img src="https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif" alt="Trained Agent" width="500"/>
 
@@ -19,7 +19,7 @@ A state is represented by a vector of 37 dimensions, which contains infomation a
 There are four possible actions - move up, move down, turn left, turn right.
 
 ### Reward
-Collecting a yellow bananna provides +1 reward while collecting a blue bananna provides -1 reward.
+Collecting a yellow banana provides +1 reward, while collecting a blue banana provides -1 reward.
 
 
 ## Dependencies
@@ -29,14 +29,14 @@ In order to run this code you will require:
 
 2.  The ml-agents package, which can be the installed following the following instructions: https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md
 
-3.  The Bananna Unity enviroment specific to your operating system, which can be found here: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation. After cloning this enviroment download the bananna enviroment appropriate to your operating system, place the Bananna Folder with the root directory, as well as change it's path when loaded at the begining of the notebooks.
+3.  The Banana Unity environment specific to your operating system, which can be found here: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation. After cloning this environment download the banana environment appropriate to your operating system, place the Banana Folder with the root directory, and change it's path when loaded at the beginning of the notebooks.
 
 
 ## How to run the repository
 
 
 ### How to watch a random agent
-To confirm the enviroment is set up correctly I recommend running the random_agent.ipynb notebook to observe a randomly-acting agent.
+To confirm the environment is set up correctly I recommend running the random_agent.ipynb notebook to observe a randomly-acting agent.
 
 ### How to train an agent
 To run the code from scratch simply open the train_agent.ipynb notebook and run the code.
@@ -48,10 +48,10 @@ To test a pre-trained agent (I've included one in this repository) simply open t
 ## What files are included
 
 ### ipynb files
-As stated above train_agent.ipynb and test_agent.ipynb are intuitive files that are all that's required to walk you through training or tested this agent. If however you would like to change the code (such as to specify a different model architecture, or hyperparameter selection) then you may find the following descriptions useful:
+As stated above train_agent.ipynb and test_agent.ipynb are intuitive files that are all that's required to walk you through training or testing this agent. If however you would like to change the code (such as to specify a different model architecture, or hyperparameter selection) then you may find the following descriptions useful:
 
 ### report.pdf
-This describes the implementation in detail beyond the scope of this readme. read this file if you'd like to know more about: the model architecture, the DQN algorithm itself and the hyperparameters used, the modifications made such as Duel DQN and prioritised replay, or the suggestions for further work.
+This describes the implementation in detail beyond the scope of this readme. Read this file if you'd like to know more about: the model architecture, the DQN algorithm itself and the hyperparameters used, the modifications made such as Dual DQN and prioritised replay, or the suggestions for further work.
 
 ### model.py
 This is a simple python script that specifies the pytorch model architecture used. For this project the architecture is quite straightforward, a simple feed-forward neural network with linear layers. Added complexity however comes from the Duel-DQN implementation, which causes the computational graph to fork into state values and state-action values before recombining.
