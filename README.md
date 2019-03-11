@@ -72,7 +72,7 @@ The algorithm used is based on the DQN algorithm described in this paper: https:
 
 <img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/May/5aef2add_dqn/dqn.png" alt="DQN diagram" width="550"/>
 
-DQN (Deep-Q-Networks) is an invovate approach in reinforcement learning that effectively combines two seperate fields:
+DQN (Deep-Q-Networks) is an innovative approach in reinforcement learning that effectively combines two seperate fields:
 
 ### Q-Learning
 In Reinforcement learning, the goal is to have an agent learn how to navigate a new enviroment with the goal of maximising cummulative rewards. One approach to this end is Q-learning, where the agent tries to learn the dynamics of the enviroment indirectly by focusing on estimating the value of each state-action pair in the enviroment. This is acheived over the course of training, using it's experiences to produce and improve these estimates - as the agent encounters state-action pairs more often it becomes more confident in its estimate of their value. 
