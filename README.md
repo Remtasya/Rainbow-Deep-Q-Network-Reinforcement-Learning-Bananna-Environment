@@ -7,7 +7,7 @@ This is the repository for the 1st project of the Deep Reinforcement Learning na
 ## Environment
 This Unity environment requires an agent to navigate a large square in order to collect bananas.
 
-<img src="https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif" alt="Trained Agent" width="500"/>
+<img src="https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif" alt="Trained Agent" width="650"/>
 
 The task is episodic with no set termination (although we will terminate after 500 timesteps).
 
