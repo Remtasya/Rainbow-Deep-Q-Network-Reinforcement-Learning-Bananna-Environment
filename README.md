@@ -1,6 +1,6 @@
 # DRLND-project-1-navigation
 
-### Summary
+## Summary
 This is the repository for the 1st project of the Deep reinforcement learning nanodegree program. The requiremrnt is to train an agent to navigate the Bananna Enviroment with an average score greater than 13 over 100 episodes. This repository provides the code to acheive this in 1000 episodes by using a DQN (Deep-Q Network) with the modifications of Double DQN, Prioritised experience replay, and Duel DQN.
 
 ### Enviroment
@@ -19,7 +19,7 @@ There are four possible actions - move up, move down, turn left, turn right.
 #### Reward
 Collecting a yellow bananna provides +1 reward while collecting a blue bananna provides -1 reward.
 
-### Dependencies
+## Dependencies
 In order to run this code you will require:
 
 1.  Python 3 with the packages in the following repository: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation, including pytorch.
@@ -28,7 +28,7 @@ In order to run this code you will require:
 
 3.  The Bananna Unity enviroment specific to your operating system, which can be found here: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation. After cloning this enviroment please replace the Bananna Folder with the one appropriate to your operating system, as well as change it's path when loaded at the begining of the script
 
-### How to run the repository
+## How to run the repository
 
 
 #### Watching a random agent
@@ -40,7 +40,7 @@ To run the code from scratch simply open the train_agent.ipynb notebook and run 
 #### How to test
 To test a pre-trained agent (I've included one in this repository) simply open the test_agent.ipynb notebook and run the code.
 
-### What files are included
+## What files are included
 
 #### ipynb files
 As stated above train_agent.ipynb and test_agent.ipynb are intuitive files that are all that's required to walk you through training or tested this agent. If however you would like to change the code (such as to specify a different model architecture, or hyperparameter selection) then you may find the following descriptions useful:
@@ -54,7 +54,7 @@ This is a simple python script that specifies the pytorch model architecture use
 #### dqn_agent.py
 This file contains all of the functions required for the agent to store experience, sample and learn from it, and select actions in the enviroment. There is also a lot of extra complexity in this coode due to the prioritised experience replay and double DQN implementations.
 
-### Agent design and implementation
+## Agent design and implementation
 
 **Details of the agent design can also be found in the report.pdf, but a summary with references is provided here:**
 
@@ -87,7 +87,7 @@ Note that under the state-action-reward Q learning paradim each timestep contrib
 
 Read more: https://arxiv.org/abs/1511.06581
 
-### Further additions
+## Further additions
 Additions that might improve the algorithm further are the other 3 modifications of the Rainbow implementation, which acheives state-of-the-art-performance in DQNs.
 
 <img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b3814f1_screen-shot-2018-06-30-at-6.40.09-pm/screen-shot-2018-06-30-at-6.40.09-pm.png" alt="Rainbow" width="400"/>
