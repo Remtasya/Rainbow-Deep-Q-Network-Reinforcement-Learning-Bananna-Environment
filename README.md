@@ -1,8 +1,8 @@
 # DRLND-project-1-navigation
 [//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif=250x "Trained Agent"
-[image2]: https://s3.amazonaws.com/video.udacity-data.com/topher/2018/May/5aef2add_dqn/dqn.png=250x "DQN diagram"
+[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent" {: height="200px"}
+[image2]: https://s3.amazonaws.com/video.udacity-data.com/topher/2018/May/5aef2add_dqn/dqn.png=250x "DQN diagram" {: height="36px" width="36px"}
 [image3]: https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b3814f1_screen-shot-2018-06-30-at-6.40.09-pm/screen-shot-2018-06-30-at-6.40.09-pm.png=250x "Rainbow"
 
 ### Summary
@@ -99,7 +99,7 @@ Additions that might improve the algorithm further are the other 3 modifications
 
 **Namely these are:**
 
-Learning from multi-step bootstrap targets -  https://arxiv.org/abs/1602.01783
-Distributional DQN - https://arxiv.org/abs/1707.06887
-Noisy DQN - https://arxiv.org/abs/1706.10295
+1.  Learning from multi-step bootstrap targets -  https://arxiv.org/abs/1602.01783
+2.  Distributional DQN - https://arxiv.org/abs/1707.06887
+3.  Noisy DQN - https://arxiv.org/abs/1706.10295
 
