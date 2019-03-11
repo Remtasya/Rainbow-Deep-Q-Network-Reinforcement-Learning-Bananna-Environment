@@ -32,8 +32,9 @@ After we've collected enough state-action-reward-state experiences we start upda
 
 #### Iterations
 We simply iterate a process involving a combination of the above two procedures over many timesteps per episode, and many episodes, until convergence of the model weights is acheived. Further mathemetical details of DQN such as the update equations can be found in the above paper, and further details of the specifications used for this process can be found in the below hyperparameter section.
-/
-In addition to vanilla DQN we also make use of the following modifications:
+
+\
+**In addition to vanilla DQN we also make use of the following modifications:**
 
 ### Double DQN
 
