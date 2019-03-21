@@ -1,4 +1,4 @@
-# DRLND-project-1-navigation
+# Rainbow QDN
 
 ## Summary
 This is the repository for the 1st project of the Deep Reinforcement Learning nanodegree program. The requirement is to train an agent to navigate the Banana Envirnoment with an average score of greater than 13 over 100 episodes. This repository provides the code to achieve this in 550 episodes by using a DQN (Deep-Q Network) with the modifications of Double DQN, Prioritised experience replay, and Duel DQN.
