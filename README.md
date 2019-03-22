@@ -1,7 +1,19 @@
-# Rainbow QDN
+# Rainbow Deep-Q-Network
 
 ## Summary
-This is the repository for the 1st project of the Deep Reinforcement Learning nanodegree program. The requirement is to train an agent to navigate the Banana Envirnoment with an average score of greater than 13 over 100 episodes. This repository provides the code to achieve this in 550 episodes by using a DQN (Deep-Q Network) with the modifications of Double DQN, Prioritised experience replay, and Duel DQN.
+This is the repository for my attempt to train a Rainbow Deep-Q Network agent on the Unity Bananna Enviroment from the Deep Reinforcement Learning nanodegree program. To 'solve' the environment the agent must navigate the Banana Envirnoment with an average score of greater than 13 over 100 consecutive episodes. This repository provides the code to achieve this in 550 episodes.
+\
+So far the following have been implemented: (descriptions of each and corresponding papers can be found at the end of this readme):
+
+| Method  | Implementation |
+| ------------- | ------------- |
+| DQN  | Implemented and working properly |
+| Double DQN  | Implemented and working properly |
+| Prioritised Experience Replay  | Implemented and working properly |
+| Duel DQN  | Implemented and working properly |
+| Noisy DQN  | Implemented but buggy, not yet pushed to master  |
+| Distributional Q-Learning  | Still reading the paper  |
+| Asyncronous Learning  | Still reading the paper  |
 
 
 ## Environment
