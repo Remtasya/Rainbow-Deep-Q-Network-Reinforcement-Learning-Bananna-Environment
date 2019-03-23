@@ -13,8 +13,8 @@ Below is my progress implementing parts of Rainbow: (descriptions of each and pa
 | Prioritised Experience Replay  | Implemented and working properly |
 | Duel DQN  | Implemented and working properly |
 | Noisy DQN  | Implemented but buggy, not yet pushed to master  |
-| Distributional Q-Learning  | Still reading the paper  |
-| Asyncronous Learning  | Still reading the paper  |
+| Distributional Q-Learning  | Still understanding the paper  |
+| Asyncronous Learning  | Still understanding the paper  |
 
 
 ## Environment
