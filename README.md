@@ -3,7 +3,8 @@
 ## Summary
 This is the repository for my attempt to train a Rainbow Deep-Q Network agent on the Unity Bananna Enviroment from the Deep Reinforcement Learning nanodegree program. To 'solve' the environment the agent must navigate the Banana Envirnoment with an average score of greater than 13 over 100 consecutive episodes. This repository provides the code to achieve this in 550 episodes.
 \
-So far the following have been implemented: (descriptions of each and corresponding papers can be found at the end of this readme):
+\
+Below is my progress implementing parts of Rainbow: (descriptions of each and papers can be found at the end of this readme):
 
 | Method  | Implementation |
 | ------------- | ------------- |
