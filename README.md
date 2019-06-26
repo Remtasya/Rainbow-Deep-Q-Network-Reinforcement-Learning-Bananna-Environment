@@ -34,49 +34,7 @@ There are four possible actions - move up, move down, turn left, turn right.
 ### Reward
 Collecting a yellow banana provides +1 reward, while collecting a blue banana provides -1 reward.
 
-
-## Dependencies
-In order to run this code you will require:
-
-1.  Python 3 with the packages in the following repository: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation, including pytorch.
-
-2.  The ml-agents package, which can be the installed following the following instructions: https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md
-
-3.  The Banana Unity environment specific to your operating system, which can be found here: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation. After cloning this environment download the banana environment appropriate to your operating system, place the Banana Folder with the root directory, and change it's path when loaded at the beginning of the notebooks.
-
-
-## How to run the repository
-
-
-### How to watch a random agent
-To confirm the environment is set up correctly I recommend running the random_agent.ipynb notebook to observe a randomly-acting agent.
-
-### How to train an agent
-To run the code from scratch simply open the train_agent.ipynb notebook and run the code.
-
-### How to test a trained agent
-To test a pre-trained agent (I've included one in this repository) simply open the test_agent.ipynb notebook and run the code.
-
-
-## What files are included
-
-### ipynb files
-As stated above train_agent.ipynb and test_agent.ipynb are intuitive files that are all that's required to walk you through training or testing this agent. If however you would like to change the code (such as to specify a different model architecture, or hyperparameter selection) then you may find the following descriptions useful:
-
-### report.md
-This describes the implementation in detail beyond the scope of this readme. Read this file if you'd like to know more about: the model architecture, the DQN algorithm itself and the hyperparameters used, the modifications made such as Dual DQN and prioritised replay, or the suggestions for further work.
-
-### model.py
-This is a simple python script that specifies the pytorch model architecture used. For this project the architecture is quite straightforward, a simple feed-forward neural network with linear layers. Added complexity however comes from the Duel-DQN implementation, which causes the computational graph to fork into state values and state-action values before recombining.
-
-### dqn_agent.py
-This file contains all of the functions required for the agent to store experience, sample and learn from it, and select actions in the enviroment. There is also a lot of extra complexity in this coode due to the prioritised experience replay and double DQN implementations.
-
-### checkpoint.pth
-This file contains the trained weights of the most recently trained agent. You can use this file to straight away test an agent without having to train one yourself.
-
-
-## Agent design and implementation
+## Theory - agent design and implementation
 
 
 **Details of the agent design can also be found in the report.pdf, but a summary with references is provided here:**
@@ -136,3 +94,44 @@ Additions that might improve the algorithm further are the other 3 modifications
 2.  Distributional DQN - https://arxiv.org/abs/1707.06887
 3.  Noisy DQN - https://arxiv.org/abs/1706.10295
 
+
+
+## Dependencies
+In order to run this code you will require:
+
+1.  Python 3 with the packages in the following repository: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation, including pytorch.
+
+2.  The ml-agents package, which can be the installed following the following instructions: https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md
+
+3.  The Banana Unity environment specific to your operating system, which can be found here: https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation. After cloning this environment download the banana environment appropriate to your operating system, place the Banana Folder with the root directory, and change it's path when loaded at the beginning of the notebooks.
+
+
+## How to run the repository
+
+
+### How to watch a random agent
+To confirm the environment is set up correctly I recommend running the random_agent.ipynb notebook to observe a randomly-acting agent.
+
+### How to train an agent
+To run the code from scratch simply open the train_agent.ipynb notebook and run the code.
+
+### How to test a trained agent
+To test a pre-trained agent (I've included one in this repository) simply open the test_agent.ipynb notebook and run the code.
+
+
+## What files are included
+
+### ipynb files
+As stated above train_agent.ipynb and test_agent.ipynb are intuitive files that are all that's required to walk you through training or testing this agent. If however you would like to change the code (such as to specify a different model architecture, or hyperparameter selection) then you may find the following descriptions useful:
+
+### report.md
+This describes the implementation in detail beyond the scope of this readme. Read this file if you'd like to know more about: the model architecture, the DQN algorithm itself and the hyperparameters used, the modifications made such as Dual DQN and prioritised replay, or the suggestions for further work.
+
+### model.py
+This is a simple python script that specifies the pytorch model architecture used. For this project the architecture is quite straightforward, a simple feed-forward neural network with linear layers. Added complexity however comes from the Duel-DQN implementation, which causes the computational graph to fork into state values and state-action values before recombining.
+
+### dqn_agent.py
+This file contains all of the functions required for the agent to store experience, sample and learn from it, and select actions in the enviroment. There is also a lot of extra complexity in this coode due to the prioritised experience replay and double DQN implementations.
+
+### checkpoint.pth
+This file contains the trained weights of the most recently trained agent. You can use this file to straight away test an agent without having to train one yourself.
