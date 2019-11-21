@@ -6,23 +6,24 @@ This is the repository for my progress training a Rainbow Deep-Q Network agent o
 \
 Below is my progress implementing parts of Rainbow: (descriptions of each and papers can be found at the end of this readme):
 
-| Method  | Implementation |
-| ------------- | ------------- |
-| DQN  | Implemented and working properly |
-| Double DQN  | Implemented and working properly |
-| Prioritised Experience Replay  | Implemented and working properly |
-| Duel DQN  | Implemented and working properly |
-| Noisy DQN  | Implemented but buggy, not yet pushed to master  |
-| Distributional Q-Learning  | Still reading the paper  |
-| Asyncronous Learning  | Still reading the paper  |
+| Method  | Implementation | Paper |
+| ------------- | ------------- | ------------- |
+| DQN  | Implemented and working properly | https://arxiv.org/pdf/1312.5602.pdf |
+| Double DQN  | Implemented and working properly | https://arxiv.org/pdf/1509.06461.pdf |
+| Prioritised Experience Replay  | Implemented and working properly | https://arxiv.org/pdf/1511.05952.pdf |
+| Duel DQN  | Implemented and working properly | https://arxiv.org/pdf/1511.06581.pdf |
+| Noisy DQN  | Implemented but buggy, not yet pushed to master | https://arxiv.org/pdf/1706.10295.pdf |
+| Distributional Q-Learning  | Still reading the paper  | https://arxiv.org/pdf/1707.06887.pdf |
+| Asyncronous Learning  | Still reading the paper  | https://arxiv.org/pdf/1602.01783.pdf |
 
 
 ## Environment
 This Unity environment requires an agent to navigate a large square in order to collect bananas.
 
-<img src="https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif" alt="Trained Agent" width="600"/>
+<img src="https://github.com/Remtasya/Rainbow-Deep-Q-Network-Reinforcement-Learning-Bananna-Environment/blob/master/project_images/banana.gif" alt="Trained Agent" width="600"/>
 
 The task is episodic with no set termination (although we will terminate after 500 timesteps).
+
 
 
 ### State space
@@ -41,7 +42,7 @@ Collecting a yellow banana provides +1 reward, while collecting a blue banana pr
 
 The algorithm used is based on the DQN algorithm described in this paper: https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf
 
-<img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/May/5aef2add_dqn/dqn.png" alt="DQN diagram" width="550"/>
+<img src="https://github.com/Remtasya/Rainbow-Deep-Q-Network-Reinforcement-Learning-Bananna-Environment/blob/master/project_images/dqn.png" alt="DQN diagram" width="550"/>
 
 DQN (Deep-Q-Networks) is an innovative approach in reinforcement learning that effectively combines two seperate fields:
 
@@ -84,9 +85,9 @@ Read more: https://arxiv.org/abs/1511.06581
 
 
 ## Further additions
-Additions that might improve the algorithm further are the other 3 modifications of the Rainbow implementation, which acheives state-of-the-art-performance in DQNs.
+Additions that might improve the algorithm further are the other 3 modifications of the Rainbow implementation, which achieves state-of-the-art-performance in DQNs.
 
-<img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b3814f1_screen-shot-2018-06-30-at-6.40.09-pm/screen-shot-2018-06-30-at-6.40.09-pm.png" alt="Rainbow" width="400"/>
+<img src="https://github.com/Remtasya/Rainbow-Deep-Q-Network-Reinforcement-Learning-Bananna-Environment/blob/master/project_images/Rainbow.png" alt="Rainbow" width="400"/>
 
 **Namely these are:**
 
