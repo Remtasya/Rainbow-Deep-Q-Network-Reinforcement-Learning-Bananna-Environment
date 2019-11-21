@@ -87,7 +87,7 @@ Read more: https://arxiv.org/abs/1511.06581
 ## Further additions
 Additions that might improve the algorithm further are the other 3 modifications of the Rainbow implementation, which achieves state-of-the-art-performance in DQNs.
 
-<img src="https://github.com/Remtasya/Rainbow-Deep-Q-Network-Reinforcement-Learning-Bananna-Environment/blob/master/project_images/Rainbow.png" alt="Rainbow" width="400"/>
+<img src="https://github.com/Remtasya/Rainbow-Deep-Q-Network-Reinforcement-Learning-Bananna-Environment/blob/master/project_images/rainbow.png" alt="Rainbow" width="400"/>
 
 **Namely these are:**
 
